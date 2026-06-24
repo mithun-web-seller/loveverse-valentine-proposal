@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Will You Be My Valentine? ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+    <div class="logo">
+        ❤️ LoveVerse
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#gallery">Memories</a></li>
+        <li><a href="#countdown">Countdown</a></li>
+    </ul>
+
+    <button id="themeToggle">
+        🌙
+    </button>
+
+    </nav>
+
+    <!-- Floating Hearts -->
+    <div class="hearts-container"></div>
+
+    <!-- Glow Orbs -->
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    
+    <!-- HERO SECTION -->
+<section class="hero" id="hero">
+
+    <div class="glass-card">
+
+        <div class="emoji">
+            ❤️
+        </div>
+
+        <h1>
+            Will You Be My Valentine?
+        </h1>
+
+        <p class="hero-text">
+            Every moment with you feels magical.
+            Would you make this Valentine's Day even more special?
+        </p>
+
+        <img
+            src="images/teddy.png"
+            alt="Teddy Bear"
+            class="teddy">
+
+        <div class="buttons">
+
+            <button id="yesBtn" class="yes-btn">
+                Yes 💖
+            </button>
+
+            <button id="noBtn" class="no-btn">
+                No 😅
+            </button>
+
+        </div>
+
+        <button class="love-btn" id="loveBtn">
+            Read My Love Letter 💌
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+</section>
+
+<!-- Love Letter Modal -->
+<div class="love-modal" id="loveModal">
+
+    <div class="love-content">
+
+        <span id="closeModal">✖</span>
+
+        <h2>My Love Letter ❤️</h2>
+
+        <p>
+            Every day with you feels magical.
+            Thank you for making my life brighter.
+            You are my favorite person in the world.
+            Every smile of yours makes my day better.
+            ❤️
+        </p>
+
+    </div>
+
+</div>
+
+    <!-- Success Popup -->
+    <div class="success-screen" id="successScreen">
+
+        <div class="success-box">
+
+            <h2>YAYYYYY ❤️</h2>
+
+            <p>
+                You just made my day!
+            </p>
+
+            <p>
+                Happy Valentine's Day 💕
+            </p>
+
+        </div>
+
+    </div>
+
+    <audio
+    id="bgMusic"
+    loop>
+
+    <source
+    src="audio/romantic.mp3"
+    type="audio/mpeg">
+
+    </audio>
+
+    <section id="gallery" class="gallery">
+
+    <h2>Our Memories ❤️</h2>
+
+    <div class="gallery-grid">
+
+        <img src="images/gallery1.jpg">
+
+        <img src="images/gallery2.jpg">
+
+        <img src="images/gallery3.jpg">
+
+    </div>
+
+    </section>
+
+    <section id="countdown" class="countdown">
+
+    <h2>Countdown To Valentine's Day ❤️</h2>
+
+    <div id="timer"></div>
+
+    </section>
+
+    <script src="js/hearts.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/countdown.js"></script>
+
+</body>
+
+</html>
