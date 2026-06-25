@@ -44,8 +44,34 @@ img{
 }
 
 .logo{
+
     color:white;
+
     font-weight:700;
+
+    animation:
+    logoGlow 2.5s ease-in-out infinite;
+
+}
+
+@keyframes logoGlow{
+
+    0%,100%{
+
+        text-shadow:
+        0 0 5px white;
+
+    }
+
+    50%{
+
+        text-shadow:
+        0 0 15px white,
+        0 0 30px #ff85a2,
+        0 0 50px #ff2e63;
+
+    }
+
 }
 
 .nav-links{
@@ -132,6 +158,27 @@ body{
     border:1px solid rgba(255,255,255,.2);
 
     box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    animation:romanticGlow 4s ease-in-out infinite; 
+}
+
+@keyframes romanticGlow{
+
+    0%,100%{
+
+        box-shadow:
+        0 0 20px rgba(255,255,255,.15);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 40px rgba(255,133,162,.6),
+        0 0 80px rgba(255,46,99,.4);
+
+    }
+
 }
 
 .emoji{
@@ -159,21 +206,25 @@ p{
 
     display:block;
 
-    animation:floatTeddy 4s ease-in-out infinite;
+    animation:
+    teddyFloat 4s ease-in-out infinite,
+    teddyGlow 3s ease-in-out infinite;
 }
 
-@keyframes floatTeddy{
+@keyframes teddyGlow{
 
     0%,100%{
 
-        transform:
-        translateY(0);
+        filter:
+        drop-shadow(0 0 5px rgba(255,255,255,.4));
+
     }
 
     50%{
 
-        transform:
-        translateY(-20px);
+        filter:
+        drop-shadow(0 0 25px #ff85a2);
+
     }
 
 }
@@ -213,6 +264,31 @@ button{
     background:white;
     color:#ff2e63;
     transition:transform .4s ease, background .4s ease, box-shadow .4s ease;
+    animation:heartBeat 1.8s ease-in-out infinite;    
+}
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    15%{
+        transform:scale(1.08);
+    }
+
+    30%{
+        transform:scale(1);
+    }
+
+    45%{
+        transform:scale(1.12);
+    }
+
+    60%{
+        transform:scale(1);
+    }
+
 }
 
 .no-btn{
@@ -225,10 +301,23 @@ button{
 }
 
 #message{
+
     margin-top:20px;
-    font-size:20px;
-    font-weight:600;
+
     min-height:30px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    text-align:center;
+
+    animation:none;
+
+    text-shadow:
+    0 0 8px rgba(255,232,163,.4);
 }
 
 .success-screen{
@@ -387,7 +476,44 @@ button{
 
 .love-content p{
     color:#333;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    line-height:2;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff2e63,
+        #ff85a2,
+        #ffd6e0,
+        #ff2e63
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:
+    textGradient 5s linear infinite;
 }
+
+@keyframes textFlow{
+
+    from{
+        background-position:0%;
+    }
+
+    to{
+        background-position:300%;
+    }
+
+}
+
 
 .love-content h2{
     color:#ff2e63;
@@ -552,6 +678,10 @@ section{
     padding:0;
 
     font-size:18px;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
 .success-box p{
@@ -571,30 +701,6 @@ body{
 .gallery-grid{
     max-width:100%;
 }
-
-
-/* .no-wrapper{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-}
-
-#message{
-
-    margin-top:8px;
-
-    min-height:25px;
-
-    font-size:14px;
-
-    text-align:center;
-
-    color:white;
-} */
-
 
 .dark .navbar{
 
@@ -616,4 +722,95 @@ body{
     background:#ff2e63;
 
     color:white;
+}
+
+
+/* ==========================
+   PREMIUM BORDER RUNNER
+========================== */
+
+.border-runner{
+    position:relative;
+    overflow:hidden;
+}
+
+.border-runner::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:60px;
+    height:3px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #ffffff,
+        #ff85a2,
+        transparent
+    );
+
+    box-shadow:
+    0 0 10px #fff,
+    0 0 20px #ff85a2;
+
+    border-radius:50px;
+
+    animation:
+    runnerMove 8s linear infinite;
+
+    z-index:10;
+
+    pointer-events:none;
+}
+
+@keyframes runnerMove{
+
+    0%{
+        top:0;
+        left:-60px;
+    }
+
+    25%{
+        top:0;
+        left:calc(100% - 20px);
+    }
+
+    50%{
+        top:calc(100% - 3px);
+        left:calc(100% - 20px);
+    }
+
+    75%{
+        top:calc(100% - 3px);
+        left:-60px;
+    }
+
+    100%{
+        top:0;
+        left:-60px;
+    }
+
+}
+
+
+#musicToggle{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    padding:0;
+
+    font-size:18px;
+
+    background:white;
+
+    color:#ff2e63;
+
+    margin-right:10px;
 }
