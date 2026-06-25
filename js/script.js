@@ -86,8 +86,20 @@ yesBtn.addEventListener("click",()=>{
     success.style.display = "flex";
 
     confetti({
-        particleCount:300,
-        spread:180
+
+    particleCount:250,
+
+    spread:120,
+
+    startVelocity:40,
+
+    zIndex:9999999,
+
+    origin:{
+        x:0.5,
+        y:0.3
+    }
+
     });
 
     setTimeout(()=>{
@@ -150,22 +162,34 @@ document.body.addEventListener(
 );
 
 
+const musicToggle =
+document.getElementById("musicToggle");
 
+let isPlaying = true;
 
-// setTimeout(() => {
+musicToggle.addEventListener(
+"click",
+()=>{
 
-//     const all = document.querySelectorAll("*");
+    if(isPlaying){
 
-//     all.forEach(el => {
+        music.pause();
 
-//         if (el.scrollWidth > document.documentElement.clientWidth) {
+        musicToggle.innerHTML =
+        "🔇";
 
-//             console.log("Overflow Element:", el);
+    }
 
-//             el.style.outline = "3px solid red";
+    else{
 
-//         }
+        music.play();
 
-//     });
+        musicToggle.innerHTML =
+        "🎵";
 
-// }, 1000);
+    }
+
+    isPlaying =
+    !isPlaying;
+
+});
