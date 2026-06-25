@@ -1,3 +1,10 @@
+<!--
+/* Website Developed By:
+MITHUNWEBSELLER
+
+Unauthorized Copying Prohibited
+--> */
+
 *{
     margin:0;
     padding:0;
@@ -813,4 +820,20 @@ body{
     color:#ff2e63;
 
     margin-right:10px;
+}
+
+
+/* IF YOU BUYID THIS WEBSITE REMOVE BELOW ALL THE CODE */
+
+.copyright{
+
+    text-align:center;
+
+    padding:20px;
+
+    color:white;
+
+    opacity:.7;
+
+    font-size:14px;
 }
